@@ -1,0 +1,21 @@
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.0//EN"
+        "http://google-web-toolkit.googlecode.com/svn/releases/2.0/distro-source/core/src/gwt-module.dtd">
+<module>
+
+    <inherits name='com.google.gwt.user.User'/>
+
+    <inherits name="com.chrisgammage.ginjitsu.GinJitsu"/>
+
+    <generate-with class="com.chrisgammage.gwtjitsu.server.ModelGenerator">
+        <all>
+            <when-type-assignable class="com.chrisgammage.gwtjitsu.client.impl.ModelBase"/>
+            <none>
+                <when-type-assignable class="com.chrisgammage.gwtjitsu.client.Generated"/>
+            </none>
+        </all>        
+    </generate-with>
+
+    <source path="client"/>
+    <source path="shared"/>
+
+</module>
