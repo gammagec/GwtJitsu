@@ -14,6 +14,14 @@
             </none>
         </all>        
     </generate-with>
+    <generate-with class="com.chrisgammage.gwtjitsu.server.PresenterGenerator">
+        <all>
+            <when-type-assignable class="com.chrisgammage.gwtjitsu.client.impl.PresenterBase"/>
+            <none>
+                <when-type-assignable class="com.chrisgammage.gwtjitsu.client.Generated"/>
+            </none>
+        </all>
+    </generate-with>
 
     <source path="client"/>
     <source path="shared"/>
